@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="robots" content="none">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="./files/style.css">
+  <link rel="stylesheet" href="./files/styles.css">
+  <link rel="stylesheet" href="./files/styless.css">
+  <style>
+    .title {
+      text-align: start;
+    }
+  </style>
+</head>
+
+<body>
+  <app-root ng-version="9.1.13">
+    <app-book>
+      <div class="landscape-message">
+        <img src="./files/moala-ticket-logo.svg" alt="logo" class="logo">
+        <p class="content-text"> チケットを表示させるには、<br> スマホを縦向きにしてください。 </p>
+      </div>
+      <div class="background"></div>
+      <div class="swiper-container swiper-container-horizontal">
+        <div class="row book-information-bar">
+          <div class="ticket-count-container"></div>
+          <div class="buttons-container">
+            <div class="header-button">
+              <img src="./files/howto.svg" alt="help-button" class="header-button-image">
+              <div class="header-button-label">使い方</div>
+            </div>
+            <div class="header-button">
+              <img src="./files/return.svg" alt="return-button" class="header-button-image">
+              <div class="header-button-label">返却</div>
+            </div>
+            <div class="header-button header-button-visitor-information">
+              <img src="./files/profile.svg" alt="profile-button" class="header-button-image">
+              <div class="header-button-label">入場者情報</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper" style="transform: translate3d(36px, 0px, 0px); transition-duration: 0ms;">
+          <app-ticket class="swiper-slide swiper-slide-active" style="width: 357px; margin-right: 8px;">
+            <div class="ticket-container">
+              <div class="ticket-main-container">
+                <app-normal-state-ticket>
+                  <div class="ticket">
+                    <div class="scrollable">
+                      <div class="ticket-header">
+                        <div>
+                          <img alt="cover image" class="ticket-image" src="./files/1_f.png">
+                          <a href="./modal4.html" class="c-circle-btn detail-button">
+                            <img src="./files/icon-info.svg" alt="info button">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="ticket-information-block non-legal-ticket-padding">
+                        <app-perform-info>
+                          <div class="title-date-container">
+                            <div class="ticket-title line-break">ＳＷＥＥＴ　ＳＴＥＡＤＹ〈特典会参加権利付き〉</div>
+                            <div class="date-and-time-wrapper">
+                              <div class="date-container">2025/11/17（月）</div>
+                              <div class="open-and-start-time-container">
+                                <div class="label-and-time-wrapper">
+                                  <div class="label">開場時間</div>
+                                  <div class="time">16:30</div>
+                                </div>
+                                <div class="label-and-time-wrapper">
+                                  <div class="label">開演時間</div>
+                                  <div class="time">18:00</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="venue-name line-break">Ｚｅｐｐ　ＤｉｖｅｒＣｉｔｙ（Ｔｏｋｙｏ）(東京都)</div>
+                          </div>
+                        </app-perform-info>
+                      </div>
+                      <div class="ticket-information-block non-qr-ticket-padding">
+                        <app-ticket-seat>
+                          <div>
+                            <div class="ticket-seat seat-name">特典会参加権利付きスタンディング</div>
+                            
+                            <div class="ticket-seat seat-number">整理番号A<span id="number"></span>番</div>
+                            
+                          </div>
+                        </app-ticket-seat>
+                      </div>
+                      <div class="line"></div>
+                      <div class="ticket-information-block">
+                        <app-owner-name>
+                          <div class="ticket-owner-name-container">
+                            <div class="table-row">
+                              <div class="label">所有者</div>
+                            </div>
+                            <div class="table-row">
+                              <div class="name-kanji">畦地勇佑</div>
+                              <div class="name-kana">（アゼチユウスケ）</div>
+                            </div>
+                          </div>
+                        </app-owner-name>
+                        <app-entitled-visitors-name>
+                          <div class="entitled-visitors-name-container">
+                            <div class="table-row">
+                              <div class="label">入場資格者</div>
+                            </div>
+                            <div class="table-row">
+                              <div class="name-kanji">畦地勇佑</div>
+                              <div class="name-kana">（アゼチユウスケ）</div>
+                            </div>
+                          </div>
+                        </app-entitled-visitors-name>
+                      </div>
+                      <div class="line"></div>
+                      <div class="ticket-information-block under-stamp-image">
+                        <app-legal-attention>
+                          <div class="legal-attention-container">
+                            【無断有償譲渡禁止】
+                            <br>
+                            本券は購入者（入場資格者）の氏名・連絡先を確認済／事前確認された方以外の入場はできません。
+                          </div>
+                        </app-legal-attention>
+                      </div>
+                    </div>
+                    <app-ticket-footer>
+                      <div class="ticket-footer">
+                        <div class="button-wrapper">
+                          <a class="gray-button">チケットを提示</a>
+                        </div>
+                      </div>
+                    </app-ticket-footer>
+                  </div>
+                </app-normal-state-ticket>
+              </div>
+            </div>
+          </app-ticket>
+        </div>
+      </div>
+      <app-how-to-use-modal>
+        <app-qt-modal>
+          <div class="modal container">
+            <div class="header">
+              <a href="./ticket1.html" id="apply-area-close-button" class="close">
+                <img src="./files/icon-menu-close-line.svg" class="close-image">
+              </a>
+              <div class="title">ご使用方法</div>
+            </div>
+            <div class="qt-modal-content max-height">
+              <div class="container-wrapper">
+                <div class="container">
+                  <div class="title">入場方法</div>
+                  <div class="under-line"></div>
+                  <div class="content"> 当日入場時に「チケットを提示」ボタンを押して、表示される画面を提示してください。<br>
+                    <br> 本チケットはスクリーンショットでの入場はできません。
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="title">チケットURL</div>
+                  <div class="content"> 当日スムーズにご利用いただくために、本チケットのURLをブックマークしておくことをお勧めします。<br>
+                    <br> 本チケットのURLはチケットぴあサイト内の「Myチケット」ページからも確認できます。
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="title">分配方法</div>
+                  <div class="content"> 同行者へチケットを分配したい場合は「チケットぴあ」に返却した後、「チケットぴあ」から分配を行ってください。<br>
+                    <br> チケットの返却は<span class="text-link">こちら</span>から
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </app-qt-modal>
+      </app-how-to-use-modal>
+    </app-book>
+  </app-root>
+</body>
+
+</html>

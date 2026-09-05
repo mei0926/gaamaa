@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="robots" content="none">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="./files/style.css">
+  <link rel="stylesheet" href="./files/styles.css">
+  <link rel="stylesheet" href="./files/styless.css">
+  <link rel="stylesheet" href="./files/stylesss.css">
+  <style>
+    .title {
+      text-align: start;
+      padding: 0;
+    }
+
+    html,
+    body {
+      overflow: hidden;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <app-root ng-version="9.1.13">
+    <app-book>
+      <div class="landscape-message">
+        <img src="./files/moala-ticket-logo.svg" alt="logo" class="logo">
+        <p class="content-text"> チケットを表示させるには、<br> スマホを縦向きにしてください。 </p>
+      </div>
+      <div class="background"></div>
+      <div class="swiper-container swiper-container-horizontal">
+        <div class="row book-information-bar">
+          <div class="ticket-count-container"></div>
+          <div class="buttons-container">
+            <div class="header-button">
+              <img src="./files/howto.svg" alt="help-button" class="header-button-image">
+              <div class="header-button-label">使い方</div>
+            </div>
+            <div class="header-button">
+              <img src="./files/return.svg" alt="return-button" class="header-button-image">
+              <div class="header-button-label">返却</div>
+            </div>
+            <div class="header-button header-button-visitor-information">
+              <img src="./files/profile.svg" alt="profile-button" class="header-button-image">
+              <div class="header-button-label">入場者情報</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper" style="transform: translate3d(36px, 0px, 0px); transition-duration: 0ms;">
+          <app-ticket class="swiper-slide swiper-slide-active" style="width: 357px; margin-right: 8px;">
+            <div class="ticket-container">
+              <div class="ticket-main-container">
+                <app-normal-state-ticket>
+                  <div class="ticket">
+                    <div class="scrollable">
+                      <div class="ticket-header">
+                        <div>
+                          <img alt="cover image" class="ticket-image" src="./files/1_f.png">
+                          <a href="./modal4.html" class="c-circle-btn detail-button">
+                            <img src="./files/icon-info.svg" alt="info button">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="ticket-information-block non-legal-ticket-padding">
+                        <app-perform-info>
+                          <div class="title-date-container">
+                            <div class="ticket-title line-break">フェルメール≪真珠の耳飾りの少女≫展</div>
+                            <div class="date-and-time-wrapper">
+                              <div class="date-container">2025/11/29（土）</div>
+                              <div class="open-and-start-time-container">
+                                <div class="label-and-time-wrapper">
+                                  <div class="label">開場時間</div>
+                                  <div class="time">16:00</div>
+                                </div>
+                                <div class="label-and-time-wrapper">
+                                  <div class="label">開演時間</div>
+                                  <div class="time">17:30</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="venue-name line-break">Ｚｅｐｐ　Ｎａｍｂａ（ＯＳＡＫＡ）(大阪府)</div>
+                          </div>
+                        </app-perform-info>
+                      </div>
+                      <div class="ticket-information-block non-qr-ticket-padding">
+                        <app-ticket-seat>
+                          <div>
+                            <div class="ticket-seat seat-name">特典会参加権利付きスタンディング</div>
+                            <!-- <div class="ticket-seat seat-number">整理番号A<span id="number"></span>番</div> -->
+                          </div>
+                        </app-ticket-seat>
+                      </div>
+                      <div class="line"></div>
+                      <div class="ticket-information-block">
+                        <app-owner-name>
+                          <div class="ticket-owner-name-container">
+                            <div class="table-row">
+                              <div class="label">所有者</div>
+                            </div>
+                            <div class="table-row">
+                              <div class="name-kanji">畦地勇佑</div>
+                              <div class="name-kana">（アゼチユウスケ）</div>
+                            </div>
+                          </div>
+                        </app-owner-name>
+                        <app-entitled-visitors-name>
+                          <div class="entitled-visitors-name-container">
+                            <div class="table-row">
+                              <div class="label">入場資格者</div>
+                            </div>
+                            <div class="table-row">
+                              <div class="name-kanji">畦地勇佑</div>
+                              <div class="name-kana">（アゼチユウスケ）</div>
+                            </div>
+                          </div>
+                        </app-entitled-visitors-name>
+                      </div>
+                      <div class="line"></div>
+                      <div class="ticket-information-block under-stamp-image">
+                        <app-legal-attention>
+                          <div class="legal-attention-container">
+                            【無断有償譲渡禁止】
+                            <br>
+                            本券は購入者（入場資格者）の氏名・連絡先を確認済／事前確認された方以外の入場はできません。
+                          </div>
+                        </app-legal-attention>
+                      </div>
+                    </div>
+                    <app-ticket-footer>
+                      <div class="ticket-footer">
+                        <div class="button-wrapper">
+                          <a class="gray-button">チケットを提示</a>
+                        </div>
+                      </div>
+                    </app-ticket-footer>
+                  </div>
+                </app-normal-state-ticket>
+              </div>
+            </div>
+          </app-ticket>
+        </div>
+      </div>
+      <app-how-to-use-modal>
+        <app-qt-modal>
+          <div class="modal container">
+            <div class="header">
+              <a href="./ticket1.html?n=1" id="apply-area-close-button" class="close">
+                <img src="./files/icon-menu-close-line.svg" class="close-image">
+              </a>
+              <div class="title">チケットを提示</div>
+            </div>
+            <div class="qt-modal-content max-height flex-column">
+              <div>
+                <div class="header header-flex-end">
+                  <div class="ticket-count">
+                    <div class="check-image-wrapper">
+                      <img src="./files/check.svg" class="check-image">
+                    </div>
+                    <div class="count-text"> 使用済みチケット：
+                      <span class="count">0 / 1</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="line"></div>
+              </div>
+              <div>
+                <div class="content">
+                  <div class="title line-break">フェルメール≪真珠の耳飾りの少女≫展</div>
+                  <div class="datetime-wrapper">
+                    <div class="datetime">
+                      <div>2026/9/5（土）</div>
+                    </div>
+                    <div class="open-and-start-time-container">
+                      <div class="label-and-time-wrapper">
+                        <div class="label">入場</div>
+                        <div class="time">12:30</div>
+                      </div>
+                      <div class="label-and-time-wrapper">
+                        <div class="label"></div>
+                        <div class="time"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div apppreventtextediting="" class="seat">
+                    一般
+                    <br>
+                    
+                    
+                  </div>
+                </div>
+                <div class="apply-guide-wrapper">
+                  <div class="apply-guide">
+                    <div class="guide-text"> こちらの画面をスタッフにご提示ください。 <br>
+                      ※スクリーンショットはご利用いただけません。 </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </app-qt-modal>
+      </app-how-to-use-modal>
+    </app-book>
+  </app-root>
+  <script>
+    class OtkRef {
+      _instance = null;
+      constructor() {
+        this._json = JSON.parse(localStorage.getItem('otk.json'));
+        if (!this._json) this.json = { number: 0 };
+      }
+
+      static get i() {
+        if (!this._instance) { this._instance = new OtkRef(); }
+        return this._instance;
+      }
+
+      get json() { this._json = JSON.parse(localStorage.getItem('otk.json')); return this._json; }
+      set json(value) {
+        this._json = value;
+        localStorage.setItem('otk.json', JSON.stringify(value));
+      }
+
+      get number() { return this.json.number; }
+      set number(value) {
+        this._json.number = value;
+        this.json = this._json;
+      }
+    }
+
+    function displayNumber() {
+      const numberElement = document.getElementById('number');
+      const number = OtkRef.i.number;
+      if (numberElement) {
+        if (number !== null && !isNaN(number)) {
+          numberElement.textContent = Number(number);
+        } else {
+          numberElement.textContent = '未設定';
+        }
+      }
+    }
+
+    let timeoutId;
+    function navigateOnLongPress() {
+      window.location.href = './mogiri2.html';
+    }
+    // タイマーをクリアする関数
+    function clearLongPressTimer() {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+      }
+    }
+    // イベントリスナーの設定
+    function addLongPressEventListeners(element) {
+      element.addEventListener('mousedown', (e) => {
+        timeoutId = setTimeout(navigateOnLongPress, 300); // 0.3秒後に画面遷移
+      });
+      element.addEventListener('mouseup', clearLongPressTimer);
+      element.addEventListener('mouseleave', clearLongPressTimer);
+      element.addEventListener('touchstart', (e) => {
+        timeoutId = setTimeout(navigateOnLongPress, 300); // 0.3秒後に画面遷移
+      });
+      element.addEventListener('touchend', clearLongPressTimer);
+      // 以下のコードで `mousemove` や `touchmove` を遷移トリガーとして保持
+      element.addEventListener('mousemove', () => {
+        if (!timeoutId) {
+          timeoutId = setTimeout(navigateOnLongPress, 300); // 0.3秒後に画面遷移
+        }
+      });
+      element.addEventListener('touchmove', () => {
+        if (!timeoutId) {
+          timeoutId = setTimeout(navigateOnLongPress, 300); // 0.3秒後に画面遷移
+        }
+      });
+    }
+    // 対象の要素にイベントリスナーを追加
+    document.addEventListener('DOMContentLoaded', () => {
+      displayNumber(); // チケット番号を表示
+      const targetElement = document.body; // 長押しを検知したい要素を指定
+      addLongPressEventListeners(targetElement);
+    });
+  </script>
+</body>
+
+</html>
